@@ -1,6 +1,6 @@
 GOLDEN_DATASET = [
     {
-        "input": "research this job and save the gap analysis: https://www.indeed.com/recruitment/job-description/sales-representative",
+        "input": "research this job and save the gap analysis: https://jobs.lever.co/toptal/6e278ab2-9413-4ae3-a893-6691ebd2ade8",
         "expected_tools_called": ["scrape_job_listing", "save_research"],
         "expected_match_score_below": 40,      # bad fit, score should be low
         "expected_match_score_above": None,
@@ -9,7 +9,7 @@ GOLDEN_DATASET = [
         "difficulty": "easy"
     },
     {
-        "input": "research this job and save the gap analysis: https://www.indeed.com/recruitment/job-description/software-engineer",
+        "input": "research this job and save the gap analysis: https://jobs.lever.co/tryjeeves/03f901fc-7a43-4fae-9916-3b287a4bdff6",
         "expected_tools_called": ["scrape_job_listing", "save_research"],
         "expected_match_score_above": 30,      # decent technical fit
         "expected_match_score_below": None,
@@ -18,7 +18,7 @@ GOLDEN_DATASET = [
         "difficulty": "medium"
     },
     {
-        "input": "research this job and save the gap analysis: https://www.indeed.com/recruitment/job-description/data-scientist",
+        "input": "research this job and save the gap analysis: https://jobs.lever.co/glsllc/c1191357-09ab-4707-855b-a99c5cb99ac1",
         "expected_tools_called": ["scrape_job_listing", "save_research"],
         "expected_match_score_above": 10,
         "expected_match_score_below": None,
