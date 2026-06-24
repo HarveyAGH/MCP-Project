@@ -177,7 +177,7 @@ Tests run against a synthetic resume in `evals/fixtures/` — your personal resu
 > ⚠️ Make sure `servers/search_server.py` is running on port 8000 before running evals.
 
 ```
-Current baseline: 4/5 passed (80.0%)  |  threshold: 80%
+Current baseline: 5/5 passed (100.0%)  |  threshold: 80%
 
 Graders:
   ✓ no_error          — agent completed without crashing
