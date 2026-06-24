@@ -5,7 +5,8 @@ import os
 
 
 
-mcp = FastMCP("search-server")
+port = int(os.getenv("PORT", 8000))
+mcp = FastMCP("search-server", port=port)
 
 @mcp.tool()
 def scrape_job_listing(url: str) -> str:
@@ -32,5 +33,4 @@ def extract_skills(job_text: str) -> str:
 
 if __name__ == "__main__":
     
-    port = int(os.getenv("PORT", 8000))
-    mcp.run(transport="streamable-http", port=port)
+    mcp.run(transport="streamable-http")

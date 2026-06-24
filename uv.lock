@@ -645,6 +645,7 @@ dependencies = [
     { name = "langchain-mcp-adapters" },
     { name = "langgraph" },
     { name = "mcp" },
+    { name = "pydantic" },
 ]
 
 [package.metadata]
@@ -656,6 +657,7 @@ requires-dist = [
     { name = "langchain-mcp-adapters", specifier = ">=0.3.0" },
     { name = "langgraph", specifier = ">=1.2.6" },
     { name = "mcp", specifier = ">=1.28.0" },
+    { name = "pydantic", specifier = ">=2.13.4" },
 ]
 
 [[package]]
