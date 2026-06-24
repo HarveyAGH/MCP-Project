@@ -105,12 +105,13 @@ def grade_llm_judge(run_result: dict, expected: dict, parsed, llm) -> dict:
     """LLM-as-judge scores the quality of the gap analysis."""
     if parsed is None:
         return {"score": 1.0, "reason": "No structured output to judge"}
+    resume = expected.get("resume_text", "not provided")
 
     prompt = f"""You are evaluating the quality of a job gap analysis produced by a career coach AI.
     
     
 IMPORTANT: The agent had access to this candidate resume:
-{expected.get("resume_text", "not provided")}
+{resume}
 
 User input: {expected["input"]}
 

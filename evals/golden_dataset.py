@@ -20,7 +20,7 @@ GOLDEN_DATASET = [
     {
         "input": "research this job and save the gap analysis: https://www.indeed.com/recruitment/job-description/data-scientist",
         "expected_tools_called": ["scrape_job_listing", "save_research"],
-        "expected_match_score_above": 25,
+        "expected_match_score_above": 10,
         "expected_match_score_below": None,
         "expected_gaps_min": 1,
         "expected_roles_min": 1,

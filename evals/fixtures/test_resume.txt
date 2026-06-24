@@ -1,0 +1,40 @@
+Alex Rivera
+AI Engineer | Python | LangChain | LangGraph | FastAPI
+alex.rivera@email.com | github.com/alexrivera
+
+SUMMARY
+AI engineer with 2 years building production LLM systems. 
+Focused on agentic pipelines, RAG, and evaluation infrastructure.
+Background in backend engineering before moving into AI.
+
+TECHNICAL SKILLS
+Languages: Python, TypeScript
+AI/LLM: LangGraph, LangChain, LangSmith, OpenAI API, Anthropic API,
+         structured outputs, tool calling, multi-agent orchestration
+RAG: ChromaDB, FAISS, SentenceTransformers, recursive chunking,
+     semantic retrieval, document loaders
+Evaluation: Golden datasets, deterministic graders, LLM-as-judge
+Backend: FastAPI, PostgreSQL, Docker, Redis, REST APIs, pytest, Git
+Cloud: AWS (Lambda, S3, Bedrock), basic GCP
+
+EXPERIENCE
+AI Engineer — Freelance | 2023 - Present
+- Built a multi-agent customer support triage system using LangGraph
+  supervisor pattern, routing across billing, technical, and escalation agents
+- Implemented RAG pipeline with ChromaDB for internal documentation search,
+  reducing support ticket volume by 30%
+- Designed eval suites with deterministic and LLM-as-judge graders
+  across 20+ test cases
+
+Backend Engineer — Startup (Contract) | 2022 - 2023
+- Built REST APIs with FastAPI and PostgreSQL for a SaaS product
+- Containerized services with Docker, deployed on AWS
+
+EDUCATION
+BSc Computer Science — State University | 2022
+
+PROJECTS
+- Agentic Support Triage: LangGraph supervisor routing 4 specialist agents,
+  Pydantic structured outputs, LangSmith tracing, Docker, eval suite
+- Research Pipeline: StateGraph researcher/writer/validator with
+  PostgresSaver checkpointing and human-in-the-loop interruption

@@ -41,6 +41,9 @@ class GapAnalysis(BaseModel):
 
 async def run_single_eval(example: dict, index: int, resume_text: str) -> dict:
     """Run one eval case — fresh agent per case to avoid memory contamination."""
+    
+    
+    
     mcp_client = MultiServerMCPClient({
         "notes": {
             "command": "python",
@@ -86,14 +89,16 @@ async def run_single_eval(example: dict, index: int, resume_text: str) -> dict:
             except Exception as e:
                 parsed = None
 
+        example["resume_text"] = resume_text  # ← must be inside try
+
         scores = {
-            "no_error":        grade_no_error(run_result, example),
-            "tools_called":    grade_tools_called(run_result, example),
-            "structured_valid": grade_structured_output(run_result, example, parsed),
-            "score_range":     grade_match_score_range(run_result, example, parsed),
-            "gaps_count":      grade_gaps_count(run_result, example, parsed),
-            "llm_judge":       grade_llm_judge(run_result, example, parsed, llm),
-        }
+        "no_error":         grade_no_error(run_result, example),
+        "tools_called":     grade_tools_called(run_result, example),
+        "structured_valid": grade_structured_output(run_result, example, parsed),
+        "score_range":      grade_match_score_range(run_result, example, parsed),
+        "gaps_count":       grade_gaps_count(run_result, example, parsed),
+        "llm_judge":        grade_llm_judge(run_result, example, parsed, llm),
+    }
 
         overall = sum(s["score"] for s in scores.values()) / len(scores)
         return {
