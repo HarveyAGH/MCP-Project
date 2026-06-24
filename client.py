@@ -24,21 +24,7 @@ BEDROCK_REGION = os.getenv("BEDROCK_REGION", "us-east-1")
 
 
 
-async def run_research():
-    print("Paste your resume below. Press Enter twice when done:\n")
-    lines = []
-    empty_count = 0
-    while True:
-        line = input()
-        if line == "":
-            empty_count += 1
-            if empty_count >= 2:
-                break
-        else:
-            empty_count = 0
-        lines.append(line)
-    resume_text = "\n".join(lines).strip()
-        
+async def run_research():    
     mcp_client = MultiServerMCPClient(
         {
             "notes": {
@@ -54,6 +40,16 @@ async def run_research():
         })
     tools = await mcp_client.get_tools()
     llm = ChatBedrockConverse(model=BEDROCK_MODEL_ID, region_name=BEDROCK_REGION)
+    
+    print("Paste your resume below. Type END on a new line when done:\n")
+    lines = []
+    while True:
+        line = input()
+        if line.strip() == "END":
+            break
+        lines.append(line)
+        resume_text = "\n".join(lines).strip()
+        
     agent = create_agent(
         model=llm,
         tools= tools,

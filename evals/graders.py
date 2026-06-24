@@ -1,5 +1,4 @@
 import json
-from typing import Any
 
 
 def _get_tool_calls(run_result: dict) -> list[str]:
