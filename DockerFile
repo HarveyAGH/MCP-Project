@@ -2,8 +2,9 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY pyproject.toml .
-RUN pip install uv && uv pip install --system mcp bs4 requests
+RUN pip install --no-cache-dir uv && \
+    uv pip install --system --no-cache-dir \
+    mcp beautifulsoup4 requests
 
 COPY servers/search_server.py .
 
