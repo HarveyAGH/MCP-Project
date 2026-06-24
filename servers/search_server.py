@@ -6,7 +6,7 @@ import os
 
 
 port = int(os.getenv("PORT", 8000))
-mcp = FastMCP("search-server", port=port)
+mcp = FastMCP("search-server", port=port, host="0.0.0.0")
 
 @mcp.tool()
 def scrape_job_listing(url: str) -> str:
