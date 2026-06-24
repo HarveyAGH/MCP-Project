@@ -6,7 +6,7 @@
 [![Evals](https://img.shields.io/badge/Evals-5%2F5%20passing-yellow?style=flat-square)]()
 [![AWS Bedrock](https://img.shields.io/badge/LLM-Claude%20Haiku-yellow?style=flat-square)](https://aws.amazon.com/bedrock/)
 
-> Paste a job URL. Get an honest match score, specific skill gaps, and roles that actually suit you — saved automatically to a local database.
+> Paste a job URL. Get an honest match score, specific skill gaps, and roles that actually suit you, saved automatically to a local database.
 
 ---
 
