@@ -1,6 +1,9 @@
 from mcp.server import FastMCP
 import requests
 from bs4 import BeautifulSoup
+import os
+
+
 
 mcp = FastMCP("search-server")
 
@@ -28,4 +31,6 @@ def extract_skills(job_text: str) -> str:
     return f"Detected skills: {', '.join(found) if found else 'None matched'}"
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    
+    port = int(os.getenv("PORT", 8000))
+    mcp.run(transport="streamable-http", port=port)
